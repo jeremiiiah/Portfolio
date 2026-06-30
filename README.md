@@ -1,23 +1,20 @@
 # Jeremiah Ogunturin — Portfolio
 
-Personal portfolio website for Jeremiah Ogunturin, MEng Chemical Engineer (University of Surrey, 2026).
+My personal portfolio website
 
-Built entirely from scratch — self-taught in HTML, CSS, and JavaScript.
+Self taught using HTML, CSS, and JavaScript.
 
-**Live site:** _coming soon_
 
 ---
 
 ## About
 
-A terminal-style portfolio site presenting my engineering background, work experience, projects, and music taste. Designed to reflect my interest in both technical precision and clean visual design.
+A terminal-style portfolio site presenting my engineering background, work experience, projects, and music taste.
 
 Features include:
 - Tab-based navigation across Profile, Experience, Projects, and Music sections
-- Live rotating ASCII anthracene (C₁₄H₁₀) molecular animation rendered in the browser
 - Dynamic music player with embedded Spotify previews for my ten favourite albums
 - Real-time UTC clock
-- Fully responsive layout
 
 ---
 
@@ -27,8 +24,7 @@ Features include:
 |------------|-------------------------------------|
 | Markup     | HTML5                               |
 | Styling    | CSS3 (custom properties, grid, flex)|
-| Logic      | Vanilla JavaScript (no frameworks)  |
-| Fonts      | Fragment Mono · Inter (Google Fonts)|
+| Logic      | JavaScript             	    	   |
 | Hosting    | GitHub Pages                        |
 
 ---
