@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeremiah Ogunturin | System Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ── HEADER ── -->
+  <header class="panel hdr">
+    <div class="hdr-name">
+      <h1>Jeremiah Ogunturin <span class="status-dot"></span></h1>
+      <p class="hdr-sub">Chemical Engineer &nbsp;·&nbsp; Molecular Dynamics Simulation & Industrial Process Design</p>
+    </div>
+    <div class="hdr-molecules">
+      <img src="Ethane-A-3D-balls.png" alt="Ethane molecule" class="hdr-img hdr-img--1">
+      <img src="Ethane-A-3D-balls.png" alt="Ethane molecule" class="hdr-img hdr-img--2">
+      <img src="Ethane-A-3D-balls.png" alt="Ethane molecule" class="hdr-img hdr-img--3">
+    </div>
+    <div class="telem-block">
+      <span class="telem-label">Local Clock</span>
+      <span class="telem-val" id="clock">--:--:-- UTC</span>
+    </div>
+  </header>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <button class="tab-btn active" data-tab="home">
+      <span class="tab-icon">⬡</span>
+      <span>
+        <span class="tab-main">Profile</span>
+        <span class="tab-sub">Introduction</span>
+      </span>
+    </button>
+    <button class="tab-btn" data-tab="work">
+      <span class="tab-icon">⬡</span>
+      <span>
+        <span class="tab-main">Experience</span>
+        <span class="tab-sub">Career Path</span>
+      </span>
+    </button>
+    <button class="tab-btn" data-tab="projects">
+      <span class="tab-icon">⬡</span>
+      <span>
+        <span class="tab-main">Projects</span>
+        <span class="tab-sub">Engineering Portfolio</span>
+      </span>
+    </button>
+    <button class="tab-btn" data-tab="music">
+      <span class="tab-icon">⬡</span>
+      <span>
+        <span class="tab-main">Music</span>
+        <span class="tab-sub">Albums</span>
+      </span>
+    </button>
+  </nav>
+
+  <!-- ── MAIN GRID ── -->
+  <div class="main-grid" id="main-grid">
+
+    <!-- LEFT COLUMN -->
+    <div class="panel left-col" id="left-col">
+      <div class="win-bar">
+        <div class="win-dots">
+          <span class="dot-r"></span>
+          <span class="dot-y"></span>
+          <span class="dot-g"></span>
+        </div>
+        <span class="win-title">◈ <span id="left-win-title">Academic Profile</span></span>
+        <span class="win-badge"></span>
+      </div>
+      <div class="panel-body dark">
+
+        <!-- Home left: academic profile -->
+        <div class="tab-pane active" id="left-home">
+          <div class="sec-box">
+            <div class="sec-head"><span>Key Milestones</span><span></span></div>
+            <div class="sec-body">
+              <ul class="bullet-list">
+                <li><strong>Dean's Commendation</strong> (Feb 2024) — awarded to 3 students for outstanding academic results</li>
+                <li>MEng Chemical Engineering, <strong>2:1 Achieved</strong>, University of Surrey</li>
+                <li>Elected <strong>Course Representative</strong>, representing 60+ students to faculty</li>
+                <li>Secured over <strong>£18,000</strong> in alumni donations for student bursaries</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sec-box">
+            <div class="sec-head"><span>Technical Skills</span><span></span></div>
+            <div class="sec-body">
+              <ul class="bullet-list">
+                <li>Simulation: <strong>HYSYS, CHEMCAD, Thermodynamic & Modelling</strong></li>
+                <li>Programming: <strong>Python, MATLAB</strong>, numerical methods, data analysis</li>
+                <li>Infrastructure: <strong>Linux, Proxmox Servers</strong>, self-hosting</li>
+                <li>Soft skills: team leadership, stakeholder communication, project planning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="sec-box">
+            <div class="sec-head"><span>Core Competencies</span><span></span></div>
+            <div class="sec-body">
+              <div class="tags">
+                <span class="tag">Process design</span>
+                <span class="tag">Thermodynamic & Molecular Modelling</span>
+                <span class="tag">Reaction engineering and Kinetics</span>
+                <span class="tag">Process safety and Hazard Analysis</span>
+                <span class="tag">Optimisation</span>
+                <span class="tag">Statistical Modelling</span>
+                <span class="tag">Process Control</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Music left: album selector (populated by JS) -->
+        <div class="tab-pane hidden" id="left-music">
+          <div class="sec-box">
+            <div class="sec-head"><span>Albums</span><span>● 10 Records</span></div>
+            <div class="sec-body">
+              <p style="font-size:9px;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Select an album:</p>
+              <div class="album-list" id="album-list"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="panel-foot">
+        <span><span id="left-section"></span></span>
+        <span></span>
+      </div>
+    </div><!-- /left-col -->
+
+    <!-- RIGHT COLUMN -->
+    <div class="panel right-col" id="right-col">
+      <div class="win-bar">
+        <div class="win-dots">
+          <span class="dot-r"></span>
+          <span class="dot-y"></span>
+          <span class="dot-g"></span>
+        </div>
+        <span class="win-title">◈<span id="doc-name">Personal Profile</span></span>
+        <span class="win-badge"></span>
+      </div>
+      <div class="panel-body" style="padding:18px 20px">
+
+        <!-- Home right: bio -->
+        <div class="tab-pane active fade-up" id="right-home">
+          <div class="bio-section">
+            <h2>Personal Profile</h2>
+            <p class="bio-para">Welcome. I'm <strong>Jeremiah</strong> — a chemical engineer who graduated from the University of Surrey with an MEng (2:1) in June 2026. This terminal is a living record of my engineering work, research, and technical projects.</p>
+            <p class="bio-para">My engineering background spans process simulation, thermodynamic modelling, and data analysis using tools like HYSYS, CHEMCAD, Python, and MATLAB. During my degree I worked on molecular simulations of porous carbons, hydrocarbon separation, and thermal infrastructure design.</p>
+            <p class="bio-para">Outside of coursework I build things. I programmed a web-based AI control scheme simulator for a zero-water-waste data centre, manage a private home server running Proxmox and Linux systems, and have written research contributing to sustainable gas storage understanding.</p>
+            <p class="bio-para">I was selected as Course Representative for Chemical Engineering (one of two per cohort) and received the Dean's Commendation in February 2024 — awarded to only three students — for outstanding academic results.</p>
+          </div>
+
+          <div style="margin-top:16px">
+            <h2 class="bio-section" style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:10px">Academic &amp; Merit Highlights</h2>
+            <ul class="bullet-list">
+              <li><strong>Process simulation</strong>: hands-on experience with HYSYS and CHEMCAD for modelling continuous process configurations and thermodynamic systems.</li>
+              <li><strong>Programming</strong>: Python, MATLAB, and numerical methods for data analysis, statistical modelling, and molecular dynamics simulations.</li>
+              <li><strong>Course Representative</strong>: elected to represent over 60 Chemical Engineering students, bridging communication between cohort and faculty.</li>
+              <li><strong>Dean's Commendation</strong>: awarded by the University of Surrey in February 2024 to only 3 students for outstanding academic results and resilience.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:16px">
+            <p style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Interests</p>
+            <div class="tags">
+              <span class="tag">Endurance Athletics</span>
+              <span class="tag">Music Production</span>
+              <span class="tag">Homelabbing &amp; Self-Hosting</span>
+              <span class="tag">Linux Customisation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work right: timeline (populated by JS) -->
+        <div class="tab-pane hidden fade-up" id="right-work">
+          <div class="section-h">
+            <div>
+              <h2>Career Progression</h2>
+              <p>A timeline of all my work experience.</p>
+            </div>
+          </div>
+          <div class="timeline" id="timeline"></div>
+        </div>
+
+        <!-- Projects right: project cards (populated by JS) -->
+        <div class="tab-pane hidden fade-up" id="right-projects">
+          <div class="section-h">
+            <div>
+              <h2>Engineering Project Portfolio</h2>
+              <p>Analytical process models, numerical simulators, and infrastructure builds.</p>
+            </div>
+            
+          </div>
+          <div class="proj-grid" id="proj-grid"></div>
+        </div>
+
+        <!-- Music right: now playing -->
+        <div class="tab-pane hidden fade-up" id="right-music">
+          <div class="section-h">
+            <div>
+              <h2>Album and Review</h2>
+            
+            </div>
+            
+          </div>
+          <p style="font-size:12px;color:var(--dim);line-height:1.7;margin-bottom:14px;font-family:var(--sans)">
+            Beyond engineering, music consumption and production are also a huge part of who I am. Music has been a hobby of mine now for several years. Here are my ten favourite albums, ranked, with a note on why I love each album as much as I do.
+          </p>
+          <div class="now-playing" id="now-playing">
+            <div class="now-rank" id="now-rank">01</div>
+            <div>
+              <div class="now-title" id="now-title"></div>
+              <div class="now-artist" id="now-artist"></div>
+              <div class="now-desc" id="now-desc"></div>
+            </div>
+          </div>
+          <div class="spotify-frame">
+            <iframe id="spotify-iframe-right" width="100%" height="360"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" style="border-radius:3px;border:none;display:block"></iframe>
+          </div>
+          <div class="spotify-foot">
+            
+            <a class="spotify-link" id="spotify-ext" href="#" target="_blank" rel="noopener noreferrer"></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="panel-foot"></div>
+    </div><!-- /right-col -->
+
+  </div><!-- /main-grid -->
+
+  <!-- ── ASCII MOLECULE ── -->
+  <div class="panel ascii-section">
+    <pre id="mol-pre" aria-hidden="true"></pre>
+    <p class="ascii-label"></p>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="panel ftr">
+    <div class="contact-links">
+      <a class="contact-btn" href="mailto:jeremiahogunturin@gmail.com">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        Email
+      </a>
+      <a class="contact-btn" href="https://www.linkedin.com/in/jeremiah-ogunturin" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="8" y1="11" x2="8" y2="17"/><line x1="8" y1="8" x2="8" y2="8.5"/><path d="M12 17v-6m4 6v-4a2 2 0 00-4 0"/></svg>
+        LinkedIn
+      </a>
+      <a class="contact-btn" href="https://github.com/jeremiiiah" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        GitHub
+      </a>
+      <button class="contact-btn" id="phone-btn" onclick="copyPhone()">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.61-.61a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        <span id="phone-label">07450654554</span>
+      </button>
+    </div>
+    <span class="copyright">Jeremiah Ogunturin © 2026</span>
+  </footer>
+
+</div><!-- /wrap -->
+
+<script src="script.js"></script>
+</body>
+</html>
